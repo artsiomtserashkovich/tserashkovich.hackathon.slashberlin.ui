@@ -4,7 +4,7 @@ function AppNavbar() {
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
-                <Navbar.Brand>EASE</Navbar.Brand>
+                <Navbar.Brand href="/">EASE</Navbar.Brand>
 
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>

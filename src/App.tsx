@@ -12,7 +12,6 @@ function App() {
               <Route index element={<Search />} />
               <Route path="/result" element={<Result />} />
           </Routes>
-          <Search/>
       </>
   );
 }

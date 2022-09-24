@@ -3,6 +3,7 @@ import {styled} from "@stitches/react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import {blackA, gray, violet} from "@radix-ui/colors";
 import {useState} from "react";
+import { useNavigate  } from "react-router-dom";
 
 const StyledSlider = styled(SliderPrimitive.Root, {
     position: 'relative',
@@ -45,6 +46,7 @@ interface DateRange {
 
 function DeliveryTimeInputSearch() {
 
+    const navigate = useNavigate();
     const [dayRange, changeDay] = useState<DateRange>({maxDate: 15});
 
     return(
@@ -72,7 +74,7 @@ function DeliveryTimeInputSearch() {
                     </Col>
                     <Col xs={1}/>
                     <Col xs={2}>
-                        <Button variant="secondary" type="submit">
+                        <Button variant="secondary" onClick={(() => navigate("/result"))}>
                             Search
                         </Button>
                     </Col>

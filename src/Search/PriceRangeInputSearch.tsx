@@ -3,6 +3,7 @@ import * as SliderPrimitive from '@radix-ui/react-slider';
 import { styled } from "@stitches/react";
 import { blackA, violet, gray } from "@radix-ui/colors";
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 const StyledSlider = styled(SliderPrimitive.Root, {
     position: 'relative',
@@ -45,6 +46,8 @@ interface PriceRange {
 }
 
 function PriceRangeInputSearch() {
+
+    const navigate = useNavigate();
     const availablePrices: PriceRange = {start: 140, end: 2530};
 
     const [priceState, changePrice] = useState<PriceRange>({start: 500, end: 1800});
@@ -75,7 +78,7 @@ function PriceRangeInputSearch() {
                 </Col>
                 <Col xs={1}/>
                 <Col xs={2}>
-                    <Button variant="secondary" type="submit">
+                    <Button variant="secondary" onClick={(() => navigate("/result"))}>
                         Search
                     </Button>
                 </Col>

@@ -1,9 +1,12 @@
 import {ListGroup, Button, Card, Row, Col, Container} from "react-bootstrap";
+import { useNavigate  } from "react-router-dom";
 
 const brands = ["Apple", "Microsof", "Asus", "LG", "Samsung"];
 
 
 function BrandInputSearch() {
+    const navigate = useNavigate ();
+
     return(
         <Card.Body>
             <Card.Title>Choose trust brand?</Card.Title>
@@ -15,7 +18,7 @@ function BrandInputSearch() {
                             {brands.map(brand => (
                                 <ListGroup.Item>
                                     <div className="d-grid gap-2">
-                                        <Button variant="secondary">{brand}</Button>
+                                        <Button onClick={(() => navigate("/result"))} variant="secondary">{brand}</Button>
                                     </div>
                                 </ListGroup.Item>))}
                         </ListGroup>
