@@ -1,47 +1,108 @@
-import {Card, Container, Row, Col} from "react-bootstrap";
+import {Card, Container, Row, Col, Button} from "react-bootstrap";
+import Image2 from "./image2.png";
+import Image3 from "./image3.png";
+import Image4 from "./image4.jpg";
 
 function Result(){
     return (
         <Container>
-            <Card className="m-3">
-                <Card.Body>
-                    <Card.Title>Best laptop ever</Card.Title>
-                    <Row>
-                        <Col xs={9}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                        </Col>
-                        <Col xs={3}>
-                            <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8&w=1000&q=80" alt="sans" width="200px"/>
-                        </Col>
-                    </Row>
-                </Card.Body>
-            </Card>
-            <Card className="m-3">
-                <Card.Body>
-                    <Card.Title>Best laptop ever</Card.Title>
-                    <Row>
-                        <Col xs={9}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                        </Col>
-                        <Col xs={3}>
-                            <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8&w=1000&q=80" alt="sans" width="200px"/>
-                        </Col>
-                    </Row>
-                </Card.Body>
-            </Card>
-            <Card className="m-3">
-                <Card.Body>
-                    <Card.Title>Best laptop ever</Card.Title>
-                    <Row>
-                        <Col xs={9}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                        </Col>
-                        <Col xs={3}>
-                            <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8&w=1000&q=80" alt="sans" width="200px"/>
-                        </Col>
-                    </Row>
-                </Card.Body>
-            </Card>
+            <Row>
+                <Col xs={5}/>
+                <Col xs={3}>
+                    <h3>Recommended</h3>
+                </Col>
+                <Col xs={4}/>
+            </Row>
+            <Row>
+                <Col xs={4}/>
+                <Col xs={4}>
+                    <Card className="m-3">
+                        <img className="card-img-top" src={Image3} width="200" height="200"/>
+                        <Card.Body>
+                            <Card.Title>SAMSUNG</Card.Title>
+                            <Card.Text>
+                                <Row>
+                                    <Col>
+                                        50” OLED Smart TV
+                                    </Col>
+                                </Row>
+                                <Row className="mt-3">
+                                    <Col xs={8}>
+                                        Price: 429$
+                                    </Col>
+                                    <Col xs={4}>
+                                        Rating: 4.7
+                                    </Col>
+                                </Row>
+                            </Card.Text>
+                        </Card.Body>
+                        <Button variant="secondary">Buy</Button>
+                    </Card>
+                </Col>
+                <Col xs={4}/>
+            </Row>
+            <Row>
+                <Col xs={5}/>
+                <Col xs={3}>
+                    <h3>Other results</h3>
+                </Col>
+                <Col xs={4}/>
+            </Row>
+            <Row>
+                <Col xs={4}/>
+                <Col xs={4}>
+                    <Card className="m-3">
+                        <img className="card-img-top" src={Image4} width="200" height="200"/>
+                        <Card.Body>
+                            <Card.Title>SAMSUNG</Card.Title>
+                            <Card.Text>
+                                <Row>
+                                    <Col>
+                                        57” OLED Smart TV
+                                    </Col>
+                                </Row>
+                                <Row className="mt-3">
+                                    <Col xs={8}>
+                                        Price: 879$
+                                    </Col>
+                                    <Col xs={4}>
+                                        Rating: 4.4
+                                    </Col>
+                                </Row>
+                            </Card.Text>
+                        </Card.Body>
+                        <Button variant="secondary">Buy</Button>
+                    </Card>
+                </Col>
+                <Col xs={4}/>
+            </Row><Row>
+            <Col xs={4}/>
+            <Col xs={4}>
+                <Card className="m-3">
+                    <img className="card-img-top" src={Image2} width="200" height="200"/>
+                    <Card.Body>
+                        <Card.Title>SAMSUNG</Card.Title>
+                        <Card.Text>
+                            <Row>
+                                <Col>
+                                    42” OLED Smart TV
+                                </Col>
+                            </Row>
+                            <Row className="mt-3">
+                                <Col xs={8}>
+                                    Price: 559$
+                                </Col>
+                                <Col xs={4}>
+                                    Rating: 4.5
+                                </Col>
+                            </Row>
+                        </Card.Text>
+                    </Card.Body>
+                    <Button variant="secondary">Buy</Button>
+                </Card>
+            </Col>
+            <Col xs={4}/>
+        </Row>
         </Container>
     );
 }

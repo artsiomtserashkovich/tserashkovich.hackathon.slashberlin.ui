@@ -1,10 +1,11 @@
 import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Bag} from "react-bootstrap-icons";
 
 function AppNavbar() {
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
-                <Navbar.Brand href="/">EASE</Navbar.Brand>
+                <Navbar.Brand href="/"><Bag color="#0954A5"/><b>ease</b>mart</Navbar.Brand>
 
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
